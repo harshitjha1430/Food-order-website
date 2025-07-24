@@ -1,62 +1,94 @@
+# 🍴 Online Food Ordering System  
 
-# ⚙️ Technology Used
-1. HTML5
-2. CSS3
-3. Core/Procedural PHP programming language
-4. MySQL Relational Database
+This is a **Food Ordering Web Application** developed as part of my learning journey with **PHP & MySQL**. The system enables users to browse food items, place orders online, and allows the admin to manage categories, food menus, and track customer orders.  
 
+---
 
-# 🧰 Features
-1. Visitors/Users can browse all the Categories and Food Items. 
-2. They also can order easily from the website.
-3. Admin can Manage Admin, Caegories and Food Items
-4. Admin can also Manage and Track Food Order and Delivery
+## **📖 Project Overview**  
+The **Online Food Ordering System** is designed to simulate a real-world restaurant ordering platform:  
+- **Users/Visitors** can explore food categories and place orders directly through the website.  
+- **Admin** can manage all backend operations, such as updating menus, tracking orders, and managing delivery status.
 
-### Pre-Requisites:
+This project demonstrates **full-stack web development** using **HTML, CSS, PHP, and MySQL**, running on the XAMPP server.  
 
-1. Download and Install XAMPP
+---
 
-[Click Here to Download](https://www.apachefriends.org/index.html)
+## **⚙️ Technology Stack**  
+- **Frontend:** HTML5, CSS3  
+- **Backend:** Core PHP (Procedural Programming)  
+- **Database:** MySQL (Relational Database)  
+- **Local Server:** XAMPP (Apache + MySQL)  
 
-2. Install any Text Editor (Sublime Text or Visual Studio Code or Atom or Brackets)
+---
 
-### Installation
+## **✨ Features**  
 
-1. Download as as Zip or Clone this project
-2. Move this project to Root Directory
+### **For Users:**  
+- Browse all available food categories and menu items.  
+- Place food orders through a simple online interface.  
+
+### **For Admin:**  
+- Manage admin accounts.  
+- Add, edit, or remove food categories and items.  
+- Track and manage orders and delivery statuses.  
+
+---
+
+## **🚀 Installation Guide**  
+
+### **Pre-Requisites:**  
+1. Install [XAMPP](https://www.apachefriends.org/index.html).  
+2. Install a text editor (VS Code, Sublime Text, Atom, etc.).  
+
+### **Steps to Run the Project:**  
+1. **Download or clone the repository**.  
+2. Move the project folder to the XAMPP `htdocs` directory:  
+   ```
+   C:\xampp\htdocs\food-order
+   ```  
+3. **Start Apache and MySQL** from the XAMPP Control Panel.  
+4. **Import the database:**  
+   - Open `phpMyAdmin` in your browser.  
+   - Create a new database (e.g., `food-order`).  
+   - Import the provided SQL file.  
+5. **Update configuration:**  
+   - Open `config/constants.php`.  
+   - Update the following constants if needed:  
+     ```php
+     define('SITEURL', 'http://localhost/food-order/');  
+     define('LOCALHOST', 'localhost');  
+     define('DB_USERNAME', 'root');  
+     define('DB_PASSWORD', '');  
+     define('DB_NAME', 'food-order');  
+     ```  
+6. Open the project in your browser:  
+   ```
+   http://localhost/food-order/
+   ```
+
+---
+
+## **📂 Project Structure**  
 ```
-Local Disc C: -> xampp -> htdocs -> 'this project'
-```
-*Local Disk C is the location where xampp was installed*
-
-3. Open XAMPP Control Panel and Start 'Apache' and 'MySQL'
-
-4. Import Database
-
-a. Open 'phpmyadmin' in your browser
-b. Create a Database
-c. Import the SQL file provided with this project
-
-5. Make Changes to settings
-
-Go to 'config' folder and Open 'constants.php' file. Then make changes on following constants
-```php
-<?php 
-//Start Session
-session_start();
-
-//Create Constants to Store Non Repeating Values
-define('SITEURL', 'http://localhost/food-order/'); //Update the home URL of the project if you have changed port number or it's live on server
-define('LOCALHOST', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'food-order');
-    
-$conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error()); //Database Connection
-$db_select = mysqli_select_db($conn, DB_NAME) or die(mysqli_error()); //SElecting Database 
-
-?>
+food-order/
+│
+├── admin/          # Admin dashboard files
+├── config/         # Configuration and database constants
+├── images/         # Food and category images
+├── css/            # Stylesheets
+├── index.php       # Homepage
+└── ...
 ```
 
-6. Now, Open the project in your browser. It should run perfectly.
+---
 
+## **💡 Future Enhancements**  
+- Add user login and order history.  
+- Implement payment gateway integration.  
+- Improve responsive design for mobile devices.  
+- Email notifications for order confirmations.  
+
+---
+
+## **🙌 Acknowledgements**  
+This project is inspired by online food ordering platforms and built for educational purposes to practice **PHP and MySQL development**.
